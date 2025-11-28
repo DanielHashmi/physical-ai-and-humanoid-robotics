@@ -1,55 +1,45 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!-- Sync Impact Report:
+Version change: None → 1.0.0
+List of modified principles: All principles are new.
+Added sections: Hackathon Constraints
+Removed sections: [SECTION_3_NAME], [SECTION_3_CONTENT]
+Templates requiring updates:
+- ./.specify/templates/plan-template.md: ⚠ pending
+- ./.specify/templates/spec-template.md: ⚠ pending
+- ./.specify/templates/tasks-template.md: ⚠ pending
+- ./.specify/templates/commands/*.md: ⚠ pending
+Follow-up TODOs: None
+-->
+# Physical AI & Humanoid Robotics Textbook Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Spec-First, AI-Augmented Development
+All development, including code and content creation, must begin with a clear, approved specification. This methodology ensures alignment with project goals and leverages AI for augmentation, not as a replacement for structured planning.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Non-Negotiable Technical Stack
+The project adheres strictly to the defined technical stack: Docusaurus (React, TypeScript, MDX) for frontend/content, Python 3.12+ with FastAPI for backend/AI, Neon Serverless Postgres and Qdrant for databases, Better-Auth for authentication, and Claude Code CLI + Spec-Kit Plus for orchestration. No deviations are permitted without explicit architectural review and ADR.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Rigorous Quality Standards
+*   **Python Code:** Strict type hints (`mypy` compliant), Google-style docstrings, and comprehensive `pytest` coverage for all backend logic.
+*   **Frontend Code:** TypeScript strict mode and a mandate for reusable components, especially for common UI elements like "Translate" and "Personalize" buttons.
+*   **Content (Markdown):** Each chapter must include "Learning Outcomes" at the beginning and "Assessments" at the end, strictly following the "Physical AI & Humanoid Robotics" syllabus modules.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Structured Architecture & Methodology
+*   **ADRs:** Architectural Decision Records are mandatory for critical components: RAG retrieval logic, Urdu translation pipeline design, and User Personalization data schema.
+*   **Checkpoints:** Work is broken down into atomic tasks, each with an estimated duration of less than 2 hours.
+*   **Validation:** No code is committed without passing all associated tests. No content is committed without passing a "Curriculum Alignment" check.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. Hackathon-Driven Execution
+Prioritize rapid development and delivery while maintaining mandatory stability. The platform must fully support the four bonus features: RAG Chatbot, Auth, Personalization, and Urdu Translation.
 
-### [PRINCIPLE_6_NAME]
+## Hackathon Constraints
 
-
-[PRINCIPLE__DESCRIPTION]
-
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
-
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
-
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+Speed is key, but stability is mandatory.
+The platform must support the 4 bonus features: RAG Chatbot, Auth, Personalization, and Urdu Translation.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+This constitution serves as the immutable standard for the "Physical AI & Humanoid Robotics Textbook" project. All changes, including amendments to principles or architectural rules, require a formal review process documented via an Architectural Decision Record (ADR) that outlines options considered, trade-offs, and rationale. Compliance with all principles must be verified in every Pull Request and code review. Any proposed deviations from the defined technical stack or quality standards must be rigorously justified and approved by the Lead Architect.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2025-11-28 | **Last Amended**: 2025-11-28
