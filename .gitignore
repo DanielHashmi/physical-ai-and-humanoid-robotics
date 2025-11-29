@@ -21,4 +21,8 @@ Thumbs.db
 
 # Docusaurus
 .docusaurus/
-.cache/
+.cache
+
+.gitignore
+GEMINI.md
+.gemini
