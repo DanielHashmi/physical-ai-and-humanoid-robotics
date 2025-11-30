@@ -1,47 +1,52 @@
 ---
 sidebar_position: 1
+slug: /
 ---
 
-# Tutorial Intro
+# Physical AI & Humanoid Robotics
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Welcome to the **Physical AI & Humanoid Robotics** textbook! This course bridges the gap between the digital brain and the physical body, teaching you to design, simulate, and deploy humanoid robots capable of natural human interactions.
+
+## Course Overview
+
+The future of AI extends beyond digital spaces into the physical world. This course introduces **Physical AI**—AI systems that function in reality and comprehend physical laws. You'll learn to work with ROS 2, Gazebo, and NVIDIA Isaac to create intelligent robotic systems.
+
+## What You'll Learn
+
+- 🤖 **Physical AI Principles** - Understand embodied intelligence
+- 🔧 **ROS 2 Mastery** - Control robots with the Robot Operating System
+- 🎮 **Simulation** - Build digital twins with Gazebo and Unity
+- 🧠 **NVIDIA Isaac** - Leverage AI-powered perception
+- 🗣️ **Conversational Robotics** - Integrate GPT models for natural interaction
+
+## Course Modules
+
+### Module 1: The Robotic Nervous System (ROS 2)
+Learn the middleware that connects all robot components. Master nodes, topics, services, and URDF.
+
+### Module 2: The Digital Twin (Gazebo & Unity)
+Simulate physics, gravity, and collisions. Build virtual environments for testing.
+
+### Module 3: The AI-Robot Brain (NVIDIA Isaac)
+Explore photorealistic simulation, VSLAM, and GPU-accelerated perception.
+
+### Module 4: Vision-Language-Action (VLA)
+Combine LLMs with robotics for voice-controlled autonomous systems.
+
+## Prerequisites
+
+- Python programming experience
+- Basic understanding of AI/ML concepts
+- Familiarity with Linux command line
 
 ## Getting Started
 
-Get started by **creating a new site**.
+Start with [Introduction to Physical AI](/docs/module-01/intro-physical-ai) to begin your journey into the world of embodied intelligence.
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+:::tip AI Assistant
+Use the **AI Chat** button in the bottom-right corner to ask questions about any topic in this textbook!
+:::
 
-### What you'll need
+## Why Physical AI Matters
 
-- [Node.js](https://nodejs.org/en/download/) version 20.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
-
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+Humanoid robots are poised to excel in our human-centered world because they share our physical form and can be trained with abundant data from interacting in human environments. This represents a significant transition from AI models confined to digital environments to **embodied intelligence** that operates in physical space.
