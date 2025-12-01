@@ -9,6 +9,33 @@ const API_KEY = 'fwnelrjrl2ur08d9s0fsdhf90324h30493';
 // Cache for translated content per page
 const translationCache = new Map<string, string>();
 
+// Helper function for mobile-friendly fetch with timeout
+async function fetchWithTimeout(
+  url: string,
+  options: RequestInit,
+  timeout: number = 60000
+): Promise<Response> {
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), timeout);
+  
+  try {
+    const response = await fetch(url, {
+      ...options,
+      signal: controller.signal,
+      mode: 'cors',
+      credentials: 'omit',
+    });
+    clearTimeout(timeoutId);
+    return response;
+  } catch (err) {
+    clearTimeout(timeoutId);
+    if (err instanceof Error && err.name === 'AbortError') {
+      throw new Error('Request timed out');
+    }
+    throw err;
+  }
+}
+
 // Shared original content storage (module-level to share between components)
 let sharedOriginalContent: string | null = null;
 
@@ -103,7 +130,7 @@ export default function TranslationControl({
         ? new DOMParser().parseFromString(sharedOriginalContent, 'text/html').body.textContent 
         : contentElement.textContent;
 
-      const response = await fetch(`${API_URL}/api/translate`, {
+      const response = await fetchWithTimeout(`${API_URL}/api/translate`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

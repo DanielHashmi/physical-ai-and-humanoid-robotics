@@ -7,14 +7,14 @@
   padding: 0.75rem 1rem;
   margin-bottom: 0.5rem;
   position: relative;
-  z-index: 50;
 }
 
 /* Icon control wrapper with tooltip support */
 .iconControlWrapper {
-  position: relative;
+  position: relative; /* Needed for absolute positioning of tooltip */
   display: inline-flex;
   align-items: center;
+  z-index: 10001; /* Higher than navbar (typically 100-1000) and tooltip itself */
 }
 
 /* Icon button styling */
@@ -64,7 +64,7 @@
 /* Tooltip styling */
 .tooltip {
   position: absolute;
-  bottom: calc(100% + 8px);
+  bottom: calc(100% + 8px); /* Position above the button */
   left: 50%;
   transform: translateX(-50%);
   padding: 6px 12px;
@@ -74,7 +74,7 @@
   font-weight: 500;
   border-radius: 6px;
   white-space: nowrap;
-  z-index: 9999;
+  z-index: 10000;
   pointer-events: none;
   animation: tooltipFadeIn 0.15s ease;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
@@ -83,11 +83,11 @@
 .tooltip::after {
   content: '';
   position: absolute;
-  top: 100%;
+  top: 100%; /* Arrow points down */
   left: 50%;
   transform: translateX(-50%);
   border: 5px solid transparent;
-  border-top-color: var(--ifm-font-color-base);
+  border-top-color: var(--ifm-font-color-base); /* Arrow points down */
 }
 
 @keyframes tooltipFadeIn {
@@ -125,7 +125,7 @@
   font-size: 0.75rem;
   border-radius: 6px;
   white-space: nowrap;
-  z-index: 9999;
+  z-index: 10000; /* Ensure error tooltip is above everything including navbar */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
